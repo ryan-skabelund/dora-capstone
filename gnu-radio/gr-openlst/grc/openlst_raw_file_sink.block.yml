@@ -1,0 +1,21 @@
+id: openlst_raw_file_sink
+label: Raw File Sink
+category: '[openlst]'
+
+templates:
+  imports: from gnuradio import openlst
+  make: openlst.raw_file_sink(${file_path})
+
+parameters:
+- id: file_path
+  label: File path
+  dtype: string
+  default: output_file.txt
+
+inputs:
+- label: message
+  domain: message
+
+outputs: []
+
+file_format: 1
